@@ -22,4 +22,13 @@ void main() {
   print(name4);
 
   const API = '121212'; // 'Const' should be known at compile time
+
+  String name5 = "jeongyeon"; // String name5 = 'jeongyeon';
+  bool alive = true;
+  int age = 12;
+  double money = 69.99;
+  // All things in the dart programming language comes from an object. (Object Oriented Language)
+  
+  num x = 12;
+  x = 1.1;
 }
