@@ -31,4 +31,16 @@ void main() {
   
   num x = 12;
   x = 1.1;
+
+  var giveMeFive = true;
+  // List<int> numbers = [1, 2, 3, 4];
+  var numbers = [
+    1, 
+    2, 
+    3, 
+    4, 
+    if (giveMeFive) 5,
+  ];
+  print(numbers);
+
 }
