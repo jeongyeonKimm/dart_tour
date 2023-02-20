@@ -20,6 +20,8 @@ String sayHello3(
   [String? country = 'cuba'] // optional positional parameter
 ) => 'Hello $name you are $age and you come from $country';
 
+String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -107,4 +109,13 @@ void main() {
 
   var results = sayHello3('nico', 12);
   print(results);
+
+  capitalizeName('jeongyeon');
+  capitalizeName(null);
+
+  String? name6;
+  name6 ??= 'jeongyeon';
+  name6 = null;
+  name6 ??= 'another';
+  print(name6);
 }
