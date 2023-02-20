@@ -1,3 +1,11 @@
+String sayHello(String potato) {
+  // call api
+  // perform calculating
+  return "Hello $potato nice to meet you!";
+}
+
+num plus(num a, num b) => a + b;
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -74,4 +82,6 @@ void main() {
   var numbers2 = {1, 2, 3, 4};  // Set<int> numbers2 = {1, 2, 3, 4};
   numbers2.add(1);
   print(numbers2);
+
+  print(sayHello('nico'));
 }
