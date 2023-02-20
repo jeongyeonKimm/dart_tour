@@ -6,6 +6,14 @@ String sayHello(String potato) {
 
 num plus(num a, num b) => a + b;
 
+String sayHello2({
+  required String name, // required => not null, String name = 'anon' => null possible
+  required int age,
+  required String country
+}) {
+  return "Hello $name, you are $age, and you come from $country";
+}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -84,4 +92,10 @@ void main() {
   print(numbers2);
 
   print(sayHello('nico'));
+
+  print(sayHello2(
+    age: 12,
+    country: 'cuba',
+    name: 'nico',
+  ));
 }
