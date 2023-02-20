@@ -14,6 +14,12 @@ String sayHello2({
   return "Hello $name, you are $age, and you come from $country";
 }
 
+String sayHello3(
+  String name, 
+  int age, 
+  [String? country = 'cuba'] // optional positional parameter
+) => 'Hello $name you are $age and you come from $country';
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -98,4 +104,7 @@ void main() {
     country: 'cuba',
     name: 'nico',
   ));
+
+  var results = sayHello3('nico', 12);
+  print(results);
 }
