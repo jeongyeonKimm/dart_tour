@@ -101,7 +101,7 @@ class Player3 extends Human {
 }
 
 class Coach extends Human {
-  void walk {
+  void walk() {
     print("Coach is walking");
   }
 }
@@ -118,6 +118,31 @@ class Player4 {
 
   void sayHello() {
     print("Hi my name is $name");
+  }
+}
+
+class Human2 {
+  final String name;
+  Human2({required this.name});
+  void sayHello() {
+    print("hi my name is $name");
+  }
+}
+
+enum Team2 { blue, red }
+
+class Player5 extends Human2 {
+  final Team team;
+
+  Player5({
+    required this.team,
+    required String name
+  }) : super(name: name);
+
+  @override
+  void sayHello() {
+    super.sayHello();
+    print('and I play for ${team}');
   }
 }
 
@@ -273,4 +298,7 @@ void main() {
   ..team = Team.blue
   ..age = 23
   ..sayHello();
+
+  var player6 = Player5(team: Team.red, name: 'jeongyeon');
+  player6.sayHello();
 }
