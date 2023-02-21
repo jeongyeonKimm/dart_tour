@@ -44,6 +44,17 @@ class Player {
   }
 }
 
+class Player2 {
+  late final String name;
+  late int xp;
+
+  Player2(this.name, this.xp);
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -148,4 +159,7 @@ void main() {
   var player2 = Player();
   print(player2.name);  
   player2.sayHello();
+
+  var player3 = Player2("lynn", 1500);
+  player3.sayHello();
 }
