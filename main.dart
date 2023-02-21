@@ -22,6 +22,19 @@ String sayHello3(
 
 String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
 
+typedef ListOfInts = List<int>;
+
+ListOfInts reverseListOfNumbers(ListOfInts list) {
+  var reversed = list.reversed;
+  return reversed.toList();
+}
+
+typedef UserInfo = Map<String, String>;
+
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
+}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -118,4 +131,8 @@ void main() {
   name6 = null;
   name6 ??= 'another';
   print(name6);
+
+  print(reverseListOfNumbers([1, 2, 3]));
+
+  print(sayHi({"name": "jeongyeon"}));
 }
