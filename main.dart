@@ -56,7 +56,7 @@ class Player2 {
 }
 
 class Player3 {
-  final String name;
+  String name;
   int xp, age;
   String team;
 
@@ -247,4 +247,12 @@ void main() {
     var player = Player4.fromJson(playerJson);
     player.sayHello();
   });
+
+  var jeongyeon2 = Player3(name: 'jeongyeon', xp: 1200, team: 'red', age: 25);
+  var potato = jeongyeon2
+  ..name = 'kim'
+  ..xp = 1200000
+  ..team = 'blue'
+  ..age = 23
+  ..sayHello();
 }
