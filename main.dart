@@ -1,3 +1,5 @@
+import 'dart:html';
+
 String sayHello(String potato) {
   // call api
   // perform calculating
@@ -55,9 +57,13 @@ class Player2 {
   }
 }
 
+abstract class Human {
+  void walk();
+}
+
 enum Team { red, blue }
 
-class Player3 {
+class Player3 extends Human {
   String name;
   int xp, age;
   Team team;
@@ -69,12 +75,16 @@ class Player3 {
     required this.age
   });
 
+  void walk() {
+    print("I'm walking");
+  }
+
   Player3.createBluePlayer({
     required String name,
     required int age
   }) : this.age = age,
       this.name = name,
-      this.team = 'blue',
+      this.team = Team.blue,
       this.xp = 0;
 
   Player3.createRedPlayer(
@@ -82,11 +92,17 @@ class Player3 {
     int age
   ) : this.age = age,
       this.name = name,
-      this.team = 'red',
+      this.team = Team.red,
       this.xp = 0;
 
   void sayHello() {
     print("Hi my name is $name");
+  }
+}
+
+class Coach extends Human {
+  void walk {
+    print("Coach is walking");
   }
 }
 
@@ -217,7 +233,7 @@ void main() {
     age: 21,
     name: "jeongyeon",
     xp: 1200,
-    team: 'blue'
+    team: Team.blue
   );
 
   var bluePlayer = Player3.createBluePlayer(
