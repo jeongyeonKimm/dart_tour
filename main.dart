@@ -55,6 +55,24 @@ class Player2 {
   }
 }
 
+class Player3 {
+  final String name;
+  int xp;
+  String team;
+  int age;
+
+  Player3({
+    required this.name,
+    required this.xp,
+    required this.team,
+    required this.age
+  });
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -162,4 +180,11 @@ void main() {
 
   var player3 = Player2("lynn", 1500);
   player3.sayHello();
+
+  var player4 = Player3(
+    age: 21,
+    name: "jeongyeon",
+    xp: 1200,
+    team: 'blue'
+  );
 }
