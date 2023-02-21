@@ -88,6 +88,21 @@ class Player3 {
   }
 }
 
+class Player4 {
+  final String name;
+  int xp;
+  String team;
+
+  Player4.fromJson(Map<String, dynamic> playerJson)
+  : name = playerJson['name'],
+    xp = playerJson['xp'],
+    team = playerJson['team'];
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -209,4 +224,27 @@ void main() {
   );
 
   var redPlayer = Player3.createRedPlayer("jeongyeon", 21);
+
+  var apiData = [
+    {
+      "name": "nico",
+      "team": "red",
+      "xp": 0,
+    },
+    {
+      "name": "lynn",
+      "team": "red",
+      "xp": 0,
+    },
+    {
+      "name": "dal",
+      "team": "red",
+      "xp": 0,
+    }
+  ];
+
+  apiData.forEach((playerJson) {
+    var player = Player4.fromJson(playerJson);
+    player.sayHello();
+  });
 }
