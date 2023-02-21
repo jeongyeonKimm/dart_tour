@@ -146,6 +146,30 @@ class Player5 extends Human2 {
   }
 }
 
+class Strong {  // Mixin
+  final double strengthLevel = 1500.99;
+}
+
+class QuickRunner { // Mixin
+  void runQuick() {
+    print("ruuuuuuuuun!");
+  }
+}
+
+class Tall {  // Mixin
+  final double height = 1.99;
+}
+
+class Player6 with Strong, QuickRunner, Tall {
+  final Team2 team;
+
+  Player6({
+    required this.team
+  });
+}
+
+class Horse with Strong, QuickRunner {}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
