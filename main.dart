@@ -35,6 +35,15 @@ String sayHi(UserInfo userInfo) {
   return "Hi ${userInfo['name']}";
 }
 
+class Player {
+  final String name = 'jeongyeon';
+  int xp = 1500;
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
 void main() {
   var name = '정연'; // String name = '정연';
   name = 'jeongyeon';
@@ -135,4 +144,8 @@ void main() {
   print(reverseListOfNumbers([1, 2, 3]));
 
   print(sayHi({"name": "jeongyeon"}));
+
+  var player2 = Player();
+  print(player2.name);  
+  player2.sayHello();
 }
